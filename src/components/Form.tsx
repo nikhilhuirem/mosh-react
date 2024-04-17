@@ -16,7 +16,7 @@ export default function Form() {
   const {
     register,
     handleSubmit,
-    formState: { errors },
+    formState: { errors, isValid },
   } = useForm<FormData>({ resolver: zodResolver(schema) });
   const onSubmit = (data: FieldValues) => console.log(data);
 
@@ -51,7 +51,7 @@ export default function Form() {
             <p className="text-danger">{errors.age.message}</p>
           )}
         </div>
-        <button className="btn btn-primary">Submit</button>
+        <button disabled={!isValid} className="btn btn-primary">Submit</button>
       </form>
     </>
   );
