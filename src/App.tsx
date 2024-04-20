@@ -20,7 +20,7 @@ function App() {
 
   const [category, setCategory] = useState('');
   useEffect(() => {
-    console.log("UseEffect from app.tsx")
+    console.log("UseEffect from app.tsx", {category})
   }, [])
   return (
     // <div>
