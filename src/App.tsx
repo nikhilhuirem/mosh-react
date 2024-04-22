@@ -52,7 +52,7 @@ function App() {
       </ul>
     </>
     
-    
+    // This are done in previous
     // <div>
     //   <div className="mb-5">
     //     <ExpenseForm onSubmit={expense => setExpenses([...expenses, { ...expense, id: expenses.length + 1}])} />
