@@ -47,8 +47,9 @@ function App() {
     <>
       { error && <p className="text-danger">{error}</p>}
       { isLoading && <div className="spinner-border"></div>}
-      <ul>
-        {users.map((user) => <li key={user.id}>{user.name}</li>)}
+      <ul className="list-group">
+        {users.map((user) => <li key={user.id} className="list-gropur-item d-flex justify-content-center">{user.name} " " 
+        <button className="btn btn-outline-danger" onClick={() => console.log('Clicked delete button')}>Delete</button></li>)}
       </ul>
     </>
     
